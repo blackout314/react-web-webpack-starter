@@ -19,6 +19,11 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],
+  devServer:{
+    proxy: {
+      '/api/*': 'https://randomuser.me/'
+    }
+  },
   module: {
     loaders: [
       {
